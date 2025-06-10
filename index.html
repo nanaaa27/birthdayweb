@@ -54,9 +54,20 @@
     margin-top: 10px;
   }
 
+button {
+  padding: 10px 20px;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Courier New', cursive;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
   /* Button */
   /* From Uiverse.io by suda-code */ 
-    button {
+    .button2 {
   padding: 12.5px 30px;
   border: 0;
   border-radius: 100px;
@@ -67,13 +78,13 @@
   -webkit-transition: all 0.5s;
 }
 
-button:hover {
+.button2:hover {
   background-color: #6fc5ff;
   box-shadow: 0 0 20px #6fc5ff50;
   transform: scale(1.1);
 }
 
-button:active {
+.button2:active {
   background-color: #6fc5ff;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
@@ -85,7 +96,8 @@ button:active {
 <body>
     
     
-
+<audio id="bgm" src="prettyeyes.mp3" autoplay muted loop></audio>
+<button onclick="document.getElementById('bgm').muted = false">🎶 Nyalakan Musik</button>
 <!-- Gambar ilustrasi -->
 <div class="image-container">
   <a href="https://imgur.com/e3QEE21"><img src="https://i.imgur.com/e3QEE21.gif" title="source: imgur.com" width="200"/></a>
@@ -101,7 +113,7 @@ button:active {
 <!-- Tombol -->
 <!-- From Uiverse.io by suda-code --> 
 <a href="knock.html">
-<button>
+<button class="button2">
     tap <3
 </button>
 </a>
