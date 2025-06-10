@@ -74,6 +74,7 @@ button {
   background-color: #0033cc;
   color: #ffffff;
   font-weight: Bold;  
+  font-family: 'Courier New', cursive;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
@@ -96,16 +97,21 @@ button {
 <body>
     
     
-<audio src="prettyeyes.mp3" autoplay loop muted id="bgm"></audio>
-<script>
-  const audio = document.getElementById("bgm");
-  document.getElementById("playBtn").onclick = () => {
-    audio.muted = false;
-    audio.play();
-  };
-</script>
+<audio id="bgm" src="prettyeyes.mp3" loop></audio>
 
-<button class="button2" id="playBtn">🔈 Putar Musik</button>
+<button onclick="playMusic()">🎵 Nyalakan Musik</button>
+
+<script>
+  function playMusic() {
+    const audio = document.getElementById('bgm');
+    audio.muted = false;
+    audio.play().catch(err => {
+      alert("Browser menolak autoplay. Silakan klik lagi.");
+      console.error(err);
+    });
+  }
+</script>
+  
 <!-- Gambar ilustrasi -->
 <div class="image-container">
   <a href="https://imgur.com/e3QEE21"><img src="https://i.imgur.com/e3QEE21.gif" title="source: imgur.com" width="200"/></a>
