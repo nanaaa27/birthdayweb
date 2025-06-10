@@ -96,8 +96,16 @@ button {
 <body>
     
     
-<audio id="bgm" src="prettyeyes.mp3" autoplay muted loop></audio>
-<button onclick="document.getElementById('bgm').muted = false">🎶 Nyalakan Musik</button>
+<audio src="backsound.mp3" autoplay loop muted id="bgm"></audio>
+<script>
+  const audio = document.getElementById("bgm");
+  document.getElementById("playBtn").onclick = () => {
+    audio.muted = false;
+    audio.play();
+  };
+</script>
+
+<button id="playBtn">🔈 Putar Musik</button>
 <!-- Gambar ilustrasi -->
 <div class="image-container">
   <a href="https://imgur.com/e3QEE21"><img src="https://i.imgur.com/e3QEE21.gif" title="source: imgur.com" width="200"/></a>
